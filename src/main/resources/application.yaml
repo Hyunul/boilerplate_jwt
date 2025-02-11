@@ -1,0 +1,25 @@
+spring:
+    # application name
+    application:
+        name: boilerplate_jwt
+    # datasource
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/ems?serverTimezone=Asia/Seoul
+        username: root
+        password: 1234
+    # jpa
+    jpa:
+        properties:
+            hibernate:
+                dialect: org.hibernate.dialect.MySQLDialect
+                "[show_sql]": true # sql show
+                "[format_sql]": true # pretty show
+        hibernate:
+            ddl-auto: update # db init (create, create-drop, update, validate, none)
+    web:
+        resources:
+            add-mappings: false
+
+jwt:
+    secret: c3ByaW5nU2VjdXJpdHlKd3RQcmFjdGljZUtleUphbmdKam9sa2l0
